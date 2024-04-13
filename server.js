@@ -32,11 +32,12 @@ if (NODE_ENV === "Development") {
 }
 
 // Cors Policy
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "http://localhost:5173", "https://altwheed.vercel.app"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000", "http://localhost:5173", "https://altwheed.vercel.app"],
+//   })
+// );
+app.use(cors());
 
 // Mount Routes
 app.use("/api/v1/auth", authRoute);
